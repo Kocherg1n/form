@@ -1,0 +1,51 @@
+@import "../../local_modules/normalize.css/normalize";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #001730;
+    font-family: $mainFont;
+    color: $mainFontColor;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+.button {
+    background: transparent;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1240px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+}

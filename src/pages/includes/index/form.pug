@@ -1,0 +1,32 @@
+form().form
+  .form__row
+    .form__error-text
+    input(type='email' name='email' required).form__input
+    label.form__label-name
+      span.form__placeholder-name Ваш e-mail
+  .form__row
+    .form__error-text
+    input(type='password' name='userPassword' required).form__input
+    label.form__label-name
+      span.form__placeholder-name Придумайте пароль
+  .form__row
+    .form__options
+      .form__name Валюта для ввода и вывода средств
+      .form__radio-group
+        .form__radio-item
+          input(id='RUB' type='radio' name='currency' value='RUB' checked).form__input-radio
+          label.form__label-radio(for='RUB') P
+        .form__radio-item
+          input(id='USD' type='radio' name='currency' value='USD').form__input-radio
+          label.form__label-radio.form__label-radio-centered(for='USD') S
+        .form__radio-item
+          input(id='EUR' type='radio' name='currency' value='EUR').form__input-radio
+          label.form__label-radio(for='EUR') E
+  .form__row
+    input(id='agreement' type='checkbox' name='agreement' required).form__input-checkbox
+    label(for='agreement').form__checkbox-icon
+    label(for='agreement').form__name Я совершеннолетний, ознакомился и принимаю соглашение об оказании услуг
+  .form__error-box
+    .form__error-box-icon
+    .form__error-box-text Учётная запись с указанным e-mail уже существует
+  button(type='submit').form__button-submit Зарегистрироваться

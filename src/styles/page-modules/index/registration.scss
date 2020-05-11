@@ -1,0 +1,95 @@
+.registration {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+
+  &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url("../img/computer.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 790px;
+        height: 613px;
+        right: 0;
+        top: 0;
+
+        @include media-tablet-horizontal {
+            right: -276px;
+        }
+
+        @include media-tablet {
+            right: -515px;
+        }
+
+        @include media-mobile {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url("../img/phone.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 245px;
+        height: 482px;
+        right: 570px;
+        top: 132px;
+
+        @include media-tablet-horizontal {
+            right: 290px;
+        }
+
+        @include media-tablet {
+            right: 50px;
+        }
+
+        @include media-mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        max-width: 440px;
+        position: relative;
+        z-index: 20;
+
+        @include media-mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__features-item {
+        line-height: $mainLineHeight;
+        display: flex;
+        margin-bottom: 15px;
+        align-items: flex-start;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            display: block;
+            content: "";
+            width: 18px;
+            height: 14px;
+            min-width: 18px;
+            min-height: 14px;
+            background-image: url("../img/check.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 16px;
+            margin-top: 6px;
+        }
+    }
+}
